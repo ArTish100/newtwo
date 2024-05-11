@@ -1,0 +1,13 @@
+<launch>
+
+  <!--AMCL-->
+  <include file="$(find newtwo)/launch/amcl.launch"/>
+
+  <!--Move Base-->
+  <include file="$(find newtwo)/launch/move_base_manv.launch"/>
+
+ <!--RVIZ-->
+  <node pkg="rviz" type="rviz" name="rviz"
+    args="-d $(find newtwo)/rviz/amcl.rviz"/>
+
+</launch>
